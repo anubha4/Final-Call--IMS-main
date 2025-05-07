@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - IMS</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/center-content.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+    <nav class="navbar colorful-navbar">
+        <div class="nav-logo">Inventory Management System</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/stock">Stock</a></li>
+            <li><a href="/orders">Orders</a></li>
+            
+            <li><a href="/reports">Reports</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container dashboard-container full-width-dash center-content">
+        <div class="center-col">
+            <div class="section-card">
+                <h2 class="section-title">Login</h2>
+                <% if (error) { %>
+                    <div class="error"><%= error %></div>
+                <% } %>
+                <form method="POST" action="/login" autocomplete="off">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="off" />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="off" />
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
